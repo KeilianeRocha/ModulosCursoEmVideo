@@ -1,0 +1,1 @@
+from exec112.utilidadescev import moeda, dado

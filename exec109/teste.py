@@ -1,5 +1,6 @@
 # from moeda import aumentar, diminuir, dobro, metade, moeda # não é o recomendado
-from exec108 import moeda  # recomendado
+  # recomendado
+from exec110 import moeda
 
 p = float(input("Digite o preço: R$ "))
 

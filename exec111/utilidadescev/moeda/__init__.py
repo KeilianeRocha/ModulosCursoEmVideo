@@ -1,7 +1,6 @@
 # TODO:
-# Adicione ao módulo moeda.py criado nos desafios anteriores, uma função chamada resumo(), que mostre na tela algumas
-# informações geradas pelas funções que ja temos no módulo criado até aqui.
-
+# Modifique as funções que foram criadas no desafio 107 para que elas aceitem um parâmetro a mais, informando se o valor
+# retornado por elas vai ser ou não formatado pela função moeda(), desenvolvida no desafio 108.
 
 def aumentar(preco=0, taxa=0, formato=False):
     """
@@ -30,5 +29,16 @@ def metade(preco=0, formato=False):
 def moeda(preco=0, moeda='R$'):
     return f'{moeda}{preco:>2.2f}'.replace('.',',')#substitui os pontos por vírgula.
 
+
+def resumo(preco=0, taxaa=10, taxar=5):
+    print('-' * 30)
+    print('RESUMO DO VALOR'.center(30))
+    print('-' * 30)
+    print(f'Preço analisado: \t\t{moeda(preco)}')
+    print(f'Dobro do preço: \t\t{dobro(preco, True)}')
+    print(f'Metade do preço: \t\t{metade(preco, True)}')
+    print(f'Com {taxaa}% de aumento: \t{aumentar(preco,taxaa, True)}')
+    print(f'Com {taxar}% de redução: \t\t{diminuir(preco, taxar, True)}')
+    print('-' * 30)
 
 
